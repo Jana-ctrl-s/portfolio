@@ -146,9 +146,10 @@
           <div class="lg:col-span-7 flex flex-col items-start">
             
             <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#121522] border border-dark-border text-accent-cyan text-xs font-mono mb-5">
-              <span>// CAIRO UNIVERSITY (FCAI)</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse"></span>
+              <span>DATA SCIENCE & AI</span>
               <span class="w-1 h-1 rounded-full bg-slate-600"></span>
-              <span class="text-slate-300">DATA SCIENCE & AI</span>
+              <span class="text-slate-300">MACHINE LEARNING · ANALYTICS</span>
             </div>
 
             <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-5">
@@ -157,7 +158,7 @@
             </h1>
 
             <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl mb-7">
-              Computer Science & AI professional at <strong class="text-white">Cairo University</strong>. I build predictive machine learning models, analyze data with Pandas & SQL, and create interactive Power BI dashboards.
+              I build predictive ML models, analyze data with Pandas & SQL, and create interactive Power BI dashboards that turn raw data into real decisions.
             </p>
 
             <!-- Action CTAs -->
@@ -176,86 +177,68 @@
               </a>
             </div>
 
-            <!-- Clean Key Stats (2 clear stats only) -->
-            <div class="flex items-center gap-8 pt-5 border-t border-dark-border w-full max-w-md font-mono">
-              <div>
-                <div class="text-2xl font-bold text-white tracking-tight">150+</div>
-                <div class="text-[10px] text-slate-400 uppercase tracking-wider font-sans">Problems Solved</div>
-              </div>
-
-            </div>
-
           </div>
 
-          <!-- Right Hero Visual: Profile Photo + Capabilities Card -->
+          <!-- Right Hero Visual: Profile Card -->
           <div class="lg:col-span-5 w-full">
-            <div class="relative mx-auto max-w-md flex flex-col gap-5">
+            <div class="relative mx-auto max-w-md">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 rounded-2xl blur-md"></div>
 
-              <!-- Profile Photo -->
-              <div class="flex justify-center">
-                <div class="relative">
-                  <!-- Glowing ring -->
-                  <div class="absolute -inset-1 bg-gradient-to-br from-indigo-500 via-purple-600 to-cyan-500 rounded-full blur-sm opacity-70"></div>
-                  <img
-                    src="profile.jpg"
-                    alt="Jana Ahmed Farahat — Data Science & AI Professional"
-                    class="relative w-36 h-36 rounded-full object-cover object-top border-2 border-dark-border shadow-xl"
-                  />
-                  <!-- Online badge -->
-                  <span class="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-emerald-400 border-2 border-[#07080c] shadow"></span>
+              <div class="relative bg-dark-card border border-dark-border rounded-2xl shadow-2xl overflow-hidden">
+
+                <!-- Photo Banner + Profile -->
+                <div class="bg-gradient-to-br from-[#0e1128] to-[#0d0f1a] px-6 pt-6 pb-4 flex items-center gap-4 border-b border-dark-border">
+                  <!-- Photo -->
+                  <div class="relative shrink-0">
+                    <div class="absolute -inset-0.5 bg-gradient-to-br from-indigo-500 via-purple-600 to-cyan-500 rounded-full blur-sm opacity-80"></div>
+                    <img
+                      src="profile.jpg"
+                      alt="Jana Ahmed Farahat"
+                      class="relative w-20 h-20 rounded-full object-cover object-top border-2 border-dark-border shadow-lg"
+                    />
+                    <span class="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 rounded-full bg-emerald-400 border-2 border-[#0e1128]"></span>
+                  </div>
+                  <!-- Name & Role -->
+                  <div>
+                    <h3 class="text-white font-extrabold text-base leading-tight">Jana Ahmed Farahat</h3>
+                    <p class="text-accent-cyan text-xs font-mono mt-0.5">Data Science & AI</p>
+                    <span class="inline-flex items-center gap-1 mt-1.5 text-[10px] font-mono text-emerald-400">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                      Available for freelance
+                    </span>
+                  </div>
                 </div>
-              </div>
 
-              <!-- Terminal Code Card -->
-              <div class="relative">
-                <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 rounded-2xl blur-md"></div>
-              
-                <div class="relative bg-dark-card border border-dark-border rounded-2xl p-6 shadow-2xl">
-                  <!-- Terminal Header -->
-                  <div class="flex items-center justify-between pb-3 border-b border-dark-border">
-                    <div class="flex items-center gap-2">
-                      <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                      <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                      <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
-                      <span class="ml-2 text-xs font-mono text-slate-400">jana_profile.py</span>
-                    </div>
-                    <span class="text-[10px] font-mono text-emerald-400">● Active</span>
+                <!-- Code Info Box -->
+                <div class="p-5 space-y-3 font-mono text-xs text-slate-300">
+                  <div class="p-3 bg-[#07080c] rounded-xl border border-dark-border space-y-1.5">
+                    <p><span class="text-accent-purple">track</span> = <span class="text-emerald-300">"Data Science & AI"</span></p>
+                    <p><span class="text-accent-purple">core_tools</span> = [<span class="text-slate-300">"Python", "SQL", "Power BI", "C++"</span>]</p>
                   </div>
 
-                  <!-- Code Info Box -->
-                  <div class="mt-4 space-y-2.5 font-mono text-xs text-slate-300">
-                    <div class="p-3 bg-[#07080c] rounded-xl border border-dark-border space-y-1.5">
-                      <p><span class="text-accent-purple">name</span> = <span class="text-accent-cyan">"Jana Ahmed Farahat"</span></p>
-                      <p><span class="text-accent-purple">track</span> = <span class="text-emerald-300">"Data Science & AI"</span></p>
-                      <p><span class="text-accent-purple">university</span> = <span class="text-yellow-300">"Cairo University (FCAI)"</span></p>
-                      <p><span class="text-accent-purple">core_tools</span> = [<span class="text-slate-300">"Python", "SQL", "Power BI", "C++"</span>]</p>
-                    </div>
-
-                    <!-- Quick Skill Pills inside card -->
-                    <div class="pt-2">
-                      <span class="text-[10px] font-sans text-slate-400 uppercase tracking-wider block mb-2">Specializations:</span>
-                      <div class="flex flex-wrap gap-1.5">
-                        <span class="tech-dark-tag text-accent-cyan">Machine Learning</span>
-                        <span class="tech-dark-tag text-emerald-300">Data Analytics</span>
-                        <span class="tech-dark-tag text-accent-purple">Power BI</span>
-                        <span class="tech-dark-tag text-yellow-300">C++ OOP</span>
-                        <span class="tech-dark-tag text-slate-300">Web Dev</span>
-                      </div>
+                  <!-- Skill Pills -->
+                  <div>
+                    <span class="text-[10px] font-sans text-slate-400 uppercase tracking-wider block mb-2">Specializations:</span>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="tech-dark-tag text-accent-cyan">Machine Learning</span>
+                      <span class="tech-dark-tag text-emerald-300">Data Analytics</span>
+                      <span class="tech-dark-tag text-accent-purple">Power BI</span>
+                      <span class="tech-dark-tag text-yellow-300">C++ OOP</span>
+                      <span class="tech-dark-tag text-slate-300">Web Dev</span>
                     </div>
                   </div>
 
-                  <!-- Bottom Action inside widget -->
-                  <div class="mt-4 pt-3 border-t border-dark-border flex items-center justify-between text-xs">
+                  <!-- Bottom Action -->
+                  <div class="pt-2 border-t border-dark-border flex items-center justify-between">
                     <span class="text-slate-400 text-[11px]">Ready for client work</span>
                     <a href="#contact" class="text-accent-cyan hover:underline font-semibold text-xs flex items-center gap-1">
                       <span>Send Message</span>
                       <i data-lucide="chevron-right" class="w-3 h-3"></i>
                     </a>
                   </div>
-
                 </div>
-              </div>
 
+              </div>
             </div>
           </div>
 
@@ -284,23 +267,82 @@
       </div>
     </div>
 
-    <!-- ABOUT SECTION (Short, Crisp, Direct) -->
+    <!-- ABOUT SECTION -->
     <section id="about" class="py-16 bg-dark-base border-b border-dark-border">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="max-w-3xl">
-          <div class="text-xs font-mono text-accent-cyan uppercase tracking-wider mb-2">
-            // ABOUT ME
+
+        <div class="text-xs font-mono text-accent-cyan uppercase tracking-wider mb-2">
+          // ABOUT ME
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-10">
+          Building reliable solutions with data and code.
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
+          <!-- Left: Photo + Quick Stats -->
+          <div class="lg:col-span-4 flex flex-col items-center gap-5">
+            <!-- Photo -->
+            <div class="relative">
+              <div class="absolute -inset-1 bg-gradient-to-br from-indigo-500 via-purple-600 to-cyan-500 rounded-2xl blur-sm opacity-50"></div>
+              <img
+                src="profile.jpg"
+                alt="Jana Ahmed Farahat"
+                class="relative w-full max-w-xs rounded-2xl object-cover object-top shadow-2xl border border-dark-border"
+                style="aspect-ratio: 3/4;"
+              />
+            </div>
+            <!-- Mini Stats -->
+            <div class="grid grid-cols-2 gap-3 w-full max-w-xs font-mono">
+              <div class="p-3 bg-dark-card rounded-xl border border-dark-border text-center">
+                <div class="text-xl font-bold text-white">150+</div>
+                <div class="text-[10px] text-slate-400 uppercase tracking-wide font-sans">Problems Solved</div>
+              </div>
+              <div class="p-3 bg-dark-card rounded-xl border border-dark-border text-center">
+                <div class="text-xl font-bold text-white">3+</div>
+                <div class="text-[10px] text-slate-400 uppercase tracking-wide font-sans">Internships</div>
+              </div>
+              <div class="p-3 bg-dark-card rounded-xl border border-dark-border text-center">
+                <div class="text-xl font-bold text-white">5+</div>
+                <div class="text-[10px] text-slate-400 uppercase tracking-wide font-sans">Projects Built</div>
+              </div>
+              <div class="p-3 bg-dark-card rounded-xl border border-dark-border text-center">
+                <div class="text-xl font-bold text-white">3</div>
+                <div class="text-[10px] text-slate-400 uppercase tracking-wide font-sans">Certifications</div>
+              </div>
+            </div>
           </div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-4">
-            Building reliable solutions with data and code.
-          </h2>
-          <p class="text-slate-300 text-sm leading-relaxed mb-4">
-            I am a Computer Science and Artificial Intelligence professional at <strong class="text-white">Cairo University (FCAI)</strong>. I enjoy turning complex data into clear insights and practical machine learning solutions.
-          </p>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            I have solved <strong class="text-white font-mono">150+ algorithmic problems</strong> across Codeforces and HackerRank, built real-world banking dashboards during my internship at the <strong class="text-white">National Bank of Egypt (NBE)</strong>, and completed intensive training in the <strong class="text-white">DEPI Data Science & AI track</strong>.
-          </p>
+
+          <!-- Right: Bio -->
+          <div class="lg:col-span-8 space-y-5">
+            <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+              I'm <strong class="text-white">Jana Ahmed Farahat</strong> — a Data Science & AI specialist with a strong foundation in machine learning, data analytics, and software engineering. I'm passionate about turning messy, complex data into clear insights and practical, intelligent solutions.
+            </p>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              My journey started with a deep love for problem-solving. I've tackled <strong class="text-white font-mono">150+ algorithmic challenges</strong> on Codeforces and HackerRank, which sharpened my analytical thinking and ability to write efficient, clean code.
+            </p>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              On the professional side, I interned at the <strong class="text-white">National Bank of Egypt (NBE)</strong> where I cleaned real-world banking records, wrote SQL queries to build a Customer 360 view, and delivered an interactive Power BI dashboard for executive reporting. I also completed certified <strong class="text-white">Generative AI training</strong> through CIB in partnership with CFA Institute, CISI, SAS, and IFC — and I'm currently part of the <strong class="text-white">DEPI Data Science & AI track</strong>, working on end-to-end machine learning pipelines.
+            </p>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Beyond data, I've built full-stack web applications, implemented C++ data structures from scratch, and created AI tools like a resume matcher powered by TF-IDF and Cosine Similarity. I enjoy working across the full stack — from raw data pipelines to polished user-facing products.
+            </p>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              I'm now available for <strong class="text-white">freelance projects</strong> in machine learning, data analysis, Power BI dashboards, Python automation, and web development. If you have a data problem that needs solving, I'd love to work on it.
+            </p>
+
+            <!-- Highlight Tags -->
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="tech-dark-tag text-accent-cyan">Machine Learning</span>
+              <span class="tech-dark-tag text-emerald-300">SQL & Data Analysis</span>
+              <span class="tech-dark-tag text-accent-purple">Power BI Dashboards</span>
+              <span class="tech-dark-tag text-yellow-300">Python Automation</span>
+              <span class="tech-dark-tag text-slate-300">C++ OOP</span>
+              <span class="tech-dark-tag text-indigo-300">Full-Stack Web</span>
+              <span class="tech-dark-tag text-pink-300">Generative AI</span>
+            </div>
+          </div>
+
         </div>
 
       </div>
