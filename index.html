@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jana Ahmed Farahat | Data Science & AI</title>
+  <meta name="description" content="Portfolio of Jana Ahmed Farahat - Computer Science & AI Professional at Cairo University (FCAI). Machine Learning, Data Analytics, and Software Engineering." />
+  <meta name="keywords" content="Jana Farahat, Data Science, Machine Learning, AI, Python, SQL, Power BI, Cairo University FCAI" />
+  <meta name="author" content="Jana Ahmed Farahat" />
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            dark: {
+              base: '#07080c',
+              card: '#0d0f17',
+              cardHover: '#131624',
+              border: '#1a1f30',
+            },
+            accent: {
+              purple: '#8b5cf6',
+              cyan: '#38bdf8',
+              emerald: '#34d399',
+              indigo: '#6366f1',
+              amber: '#fbbf24',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-[#07080c] text-slate-200 antialiased selection:bg-indigo-500 selection:text-white font-sans">
+
+  <!-- TOP STATUS BAR -->
+  <aside class="top-telemetry-bar border-b border-dark-border" aria-label="Status bar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-2 text-[11px] font-mono text-slate-400">
+      <div class="flex items-center gap-2 text-emerald-400 font-semibold">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>AVAILABLE FOR FREELANCE & AI INTERNSHIPS</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px]">
+        <a href="https://github.com/Jana-ctrl-s" target="_blank" rel="noopener noreferrer" class="hover:text-accent-cyan transition-colors flex items-center gap-1">
+          <i data-lucide="github" class="w-3.5 h-3.5"></i>
+          <span>@Jana-ctrl-s</span>
+        </a>
+        <span class="text-slate-600">•</span>
+        <a href="mailto:janaahmedf18@gmail.com" class="hover:text-accent-cyan transition-colors flex items-center gap-1">
+          <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+          <span>janaahmedf18@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-50 bg-[#07080c]/90 backdrop-blur-md border-b border-dark-border transition-all" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-18">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="group flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-indigo-500 via-purple-600 to-cyan-500 flex items-center justify-center text-white font-bold text-sm shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform font-mono">
+          JF
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-white tracking-tight text-sm leading-tight group-hover:text-accent-cyan transition-colors">
+            Jana Ahmed Farahat
+          </span>
+          <span class="text-[10px] text-slate-400 font-mono">
+            Data Science & AI
+          </span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-semibold text-slate-400" aria-label="Main Navigation">
+        <a href="#about" class="nav-link hover:text-white transition-colors">About</a>
+        <a href="#services" class="nav-link hover:text-white transition-colors">Services</a>
+        <a href="#projects" class="nav-link hover:text-white transition-colors">Projects</a>
+        <a href="#experience" class="nav-link hover:text-white transition-colors">Experience</a>
+        <a href="#skills" class="nav-link hover:text-white transition-colors">Skills</a>
+        <a href="#education" class="nav-link hover:text-white transition-colors">Education</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <button onclick="copyEmail()" class="btn btn-dark text-xs py-2 px-3 font-mono flex items-center gap-1.5 text-slate-300 hover:text-white">
+          <i data-lucide="copy" class="w-3.5 h-3.5 text-accent-cyan"></i>
+          <span>Copy Email</span>
+        </button>
+        <a href="#contact" class="btn btn-gradient text-xs py-2 px-4 font-semibold flex items-center gap-1.5 shadow-md shadow-indigo-500/10">
+          <span>Get in Touch</span>
+          <i data-lucide="arrow-right" class="w-3 h-3"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobileMenuBtn" class="lg:hidden p-2 text-slate-400 hover:text-white hover:bg-dark-card rounded-lg transition-colors" aria-label="Toggle Navigation">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-dark-border bg-[#0d0f17] px-6 py-5 shadow-2xl">
+      <nav class="flex flex-col gap-3 text-xs font-semibold text-slate-300">
+        <a href="#about" class="mobile-nav-link py-1 hover:text-accent-cyan">About</a>
+        <a href="#services" class="mobile-nav-link py-1 hover:text-accent-cyan">Freelance Services</a>
+        <a href="#projects" class="mobile-nav-link py-1 hover:text-accent-cyan">Projects</a>
+        <a href="#experience" class="mobile-nav-link py-1 hover:text-accent-cyan">Experience</a>
+        <a href="#skills" class="mobile-nav-link py-1 hover:text-accent-cyan">Skills</a>
+        <a href="#education" class="mobile-nav-link py-1 hover:text-accent-cyan">Education</a>
+        <div class="pt-3 border-t border-dark-border">
+          <a href="#contact" class="btn btn-gradient text-center justify-center text-xs py-2.5 w-full">Start a Project</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    
+    <!-- HERO SECTION (Clean, Punchy, Engaging) -->
+    <section id="hero" class="relative pt-12 pb-16 md:py-20 overflow-hidden hero-dark-glow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left Hero Text -->
+          <div class="lg:col-span-7 flex flex-col items-start">
+            
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#121522] border border-dark-border text-accent-cyan text-xs font-mono mb-5">
+              <span>// CAIRO UNIVERSITY (FCAI)</span>
+              <span class="w-1 h-1 rounded-full bg-slate-600"></span>
+              <span class="text-slate-300">DATA SCIENCE & AI</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-5">
+              Hi, I'm Jana.<br />
+              <span class="gradient-headline">Turning data into intelligence.</span>
+            </h1>
+
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl mb-7">
+              Computer Science & AI professional at <strong class="text-white">Cairo University</strong>. I build predictive machine learning models, analyze data with Pandas & SQL, and create interactive Power BI dashboards.
+            </p>
+
+            <!-- Action CTAs -->
+            <div class="flex flex-wrap items-center gap-3 w-full sm:w-auto mb-8">
+              <a href="#projects" class="btn btn-gradient text-xs py-2.5 px-5 shadow-lg shadow-indigo-500/20 flex items-center gap-2">
+                <span>View Projects</span>
+                <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+              </a>
+              <a href="#services" class="btn btn-dark text-xs py-2.5 px-4 flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-accent-cyan"></i>
+                <span>Freelance Services</span>
+              </a>
+              <a href="https://github.com/Jana-ctrl-s" target="_blank" rel="noopener noreferrer" class="btn btn-dark text-xs py-2.5 px-3 flex items-center gap-1.5 font-mono text-slate-300">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                <span>GitHub</span>
+              </a>
+            </div>
+
+            <!-- Clean Key Stats (2 clear stats only) -->
+            <div class="flex items-center gap-8 pt-5 border-t border-dark-border w-full max-w-md font-mono">
+              <div>
+                <div class="text-2xl font-bold text-white tracking-tight">150+</div>
+                <div class="text-[10px] text-slate-400 uppercase tracking-wider font-sans">Problems Solved</div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Right Hero Visual: Profile Photo + Capabilities Card -->
+          <div class="lg:col-span-5 w-full">
+            <div class="relative mx-auto max-w-md flex flex-col gap-5">
+
+              <!-- Profile Photo -->
+              <div class="flex justify-center">
+                <div class="relative">
+                  <!-- Glowing ring -->
+                  <div class="absolute -inset-1 bg-gradient-to-br from-indigo-500 via-purple-600 to-cyan-500 rounded-full blur-sm opacity-70"></div>
+                  <img
+                    src="profile.jpg"
+                    alt="Jana Ahmed Farahat — Data Science & AI Professional"
+                    class="relative w-36 h-36 rounded-full object-cover object-top border-2 border-dark-border shadow-xl"
+                  />
+                  <!-- Online badge -->
+                  <span class="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-emerald-400 border-2 border-[#07080c] shadow"></span>
+                </div>
+              </div>
+
+              <!-- Terminal Code Card -->
+              <div class="relative">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 rounded-2xl blur-md"></div>
+              
+                <div class="relative bg-dark-card border border-dark-border rounded-2xl p-6 shadow-2xl">
+                  <!-- Terminal Header -->
+                  <div class="flex items-center justify-between pb-3 border-b border-dark-border">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                      <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                      <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+                      <span class="ml-2 text-xs font-mono text-slate-400">jana_profile.py</span>
+                    </div>
+                    <span class="text-[10px] font-mono text-emerald-400">● Active</span>
+                  </div>
+
+                  <!-- Code Info Box -->
+                  <div class="mt-4 space-y-2.5 font-mono text-xs text-slate-300">
+                    <div class="p-3 bg-[#07080c] rounded-xl border border-dark-border space-y-1.5">
+                      <p><span class="text-accent-purple">name</span> = <span class="text-accent-cyan">"Jana Ahmed Farahat"</span></p>
+                      <p><span class="text-accent-purple">track</span> = <span class="text-emerald-300">"Data Science & AI"</span></p>
+                      <p><span class="text-accent-purple">university</span> = <span class="text-yellow-300">"Cairo University (FCAI)"</span></p>
+                      <p><span class="text-accent-purple">core_tools</span> = [<span class="text-slate-300">"Python", "SQL", "Power BI", "C++"</span>]</p>
+                    </div>
+
+                    <!-- Quick Skill Pills inside card -->
+                    <div class="pt-2">
+                      <span class="text-[10px] font-sans text-slate-400 uppercase tracking-wider block mb-2">Specializations:</span>
+                      <div class="flex flex-wrap gap-1.5">
+                        <span class="tech-dark-tag text-accent-cyan">Machine Learning</span>
+                        <span class="tech-dark-tag text-emerald-300">Data Analytics</span>
+                        <span class="tech-dark-tag text-accent-purple">Power BI</span>
+                        <span class="tech-dark-tag text-yellow-300">C++ OOP</span>
+                        <span class="tech-dark-tag text-slate-300">Web Dev</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Bottom Action inside widget -->
+                  <div class="mt-4 pt-3 border-t border-dark-border flex items-center justify-between text-xs">
+                    <span class="text-slate-400 text-[11px]">Ready for client work</span>
+                    <a href="#contact" class="text-accent-cyan hover:underline font-semibold text-xs flex items-center gap-1">
+                      <span>Send Message</span>
+                      <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH MARQUEE -->
+    <div class="w-full bg-[#050609] border-y border-dark-border py-2.5 overflow-hidden">
+      <div class="ticker-wrapper flex items-center">
+        <div class="ticker-track flex items-center gap-8 font-mono text-xs uppercase tracking-wider whitespace-nowrap text-slate-400">
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-cyan"></span> Python (Pandas / NumPy / Scikit-Learn)</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-purple"></span> Machine Learning & Predictive Models</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-emerald"></span> Power BI & DAX Dashboards</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-indigo"></span> SQL & Data Queries</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-amber"></span> C++ OOP & Problem Solving</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-cyan"></span> Full-Stack Web Development</span>
+          <!-- Duplicate for loop -->
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-cyan"></span> Python (Pandas / NumPy / Scikit-Learn)</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-purple"></span> Machine Learning & Predictive Models</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-emerald"></span> Power BI & DAX Dashboards</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-indigo"></span> SQL & Data Queries</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-amber"></span> C++ OOP & Problem Solving</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-cyan"></span> Full-Stack Web Development</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION (Short, Crisp, Direct) -->
+    <section id="about" class="py-16 bg-dark-base border-b border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl">
+          <div class="text-xs font-mono text-accent-cyan uppercase tracking-wider mb-2">
+            // ABOUT ME
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-4">
+            Building reliable solutions with data and code.
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            I am a Computer Science and Artificial Intelligence professional at <strong class="text-white">Cairo University (FCAI)</strong>. I enjoy turning complex data into clear insights and practical machine learning solutions.
+          </p>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            I have solved <strong class="text-white font-mono">150+ algorithmic problems</strong> across Codeforces and HackerRank, built real-world banking dashboards during my internship at the <strong class="text-white">National Bank of Egypt (NBE)</strong>, and completed intensive training in the <strong class="text-white">DEPI Data Science & AI track</strong>.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FREELANCE SERVICES (5 Clean, Crisp Cards) -->
+    <section id="services" class="py-16 bg-[#0a0c13] border-b border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-3">
+          <div>
+            <div class="text-xs font-mono text-accent-purple uppercase tracking-wider mb-1.5">
+              // SERVICES
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              Freelance Offerings.
+            </h2>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm">
+            Available for freelance projects, internships, and contract development.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          
+          <!-- Service 1 -->
+          <div class="service-dark-card flex flex-col justify-between">
+            <div>
+              <div class="w-9 h-9 rounded-lg bg-[#161a30] text-indigo-400 flex items-center justify-center mb-3">
+                <i data-lucide="brain" class="w-4.5 h-4.5"></i>
+              </div>
+              <h3 class="text-sm font-bold text-white mb-1.5">Machine Learning Models</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                Predictive classification, regression, customer churn estimation, and clustering using Python & Scikit-Learn.
+              </p>
+              <ul class="space-y-1 text-xs text-slate-300 font-mono mb-4">
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Data Preprocessing & Cleaning</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Model Training & Evaluation</li>
+              </ul>
+            </div>
+            <button onclick="selectService('Machine Learning Models')" class="btn btn-dark w-full text-xs font-semibold py-2">
+              Request Service
+            </button>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-dark-card flex flex-col justify-between">
+            <div>
+              <div class="w-9 h-9 rounded-lg bg-[#151928] text-accent-cyan flex items-center justify-center mb-3">
+                <i data-lucide="bar-chart-2" class="w-4.5 h-4.5"></i>
+              </div>
+              <h3 class="text-sm font-bold text-white mb-1.5">Data Analysis & EDA</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                Exploratory data analysis with Pandas & NumPy, finding patterns, correlations, and statistical summaries.
+              </p>
+              <ul class="space-y-1 text-xs text-slate-300 font-mono mb-4">
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> In-depth Data Insights</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Clean Jupyter Notebooks</li>
+              </ul>
+            </div>
+            <button onclick="selectService('Data Analysis & EDA')" class="btn btn-dark w-full text-xs font-semibold py-2">
+              Request Service
+            </button>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-dark-card flex flex-col justify-between">
+            <div>
+              <div class="w-9 h-9 rounded-lg bg-[#14231f] text-emerald-400 flex items-center justify-center mb-3">
+                <i data-lucide="pie-chart" class="w-4.5 h-4.5"></i>
+              </div>
+              <h3 class="text-sm font-bold text-white mb-1.5">Power BI Dashboards</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                Interactive Power BI reports with DAX measures to visualize KPIs and customer data clearly.
+              </p>
+              <ul class="space-y-1 text-xs text-slate-300 font-mono mb-4">
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Interactive Executive Visuals</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Custom DAX Calculations</li>
+              </ul>
+            </div>
+            <button onclick="selectService('Power BI Dashboards')" class="btn btn-dark w-full text-xs font-semibold py-2">
+              Request Service
+            </button>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-dark-card flex flex-col justify-between">
+            <div>
+              <div class="w-9 h-9 rounded-lg bg-[#251f12] text-amber-400 flex items-center justify-center mb-3">
+                <i data-lucide="terminal" class="w-4.5 h-4.5"></i>
+              </div>
+              <h3 class="text-sm font-bold text-white mb-1.5">Python Automation & Scripting</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                Custom Python scripts for automated data extraction, CSV/Excel processing, and algorithmic tasks.
+              </p>
+              <ul class="space-y-1 text-xs text-slate-300 font-mono mb-4">
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Automated Data Processing</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Clean & Documented Scripts</li>
+              </ul>
+            </div>
+            <button onclick="selectService('Python Automation')" class="btn btn-dark w-full text-xs font-semibold py-2">
+              Request Service
+            </button>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-dark-card flex flex-col justify-between">
+            <div>
+              <div class="w-9 h-9 rounded-lg bg-[#1d162a] text-purple-400 flex items-center justify-center mb-3">
+                <i data-lucide="layout" class="w-4.5 h-4.5"></i>
+              </div>
+              <h3 class="text-sm font-bold text-white mb-1.5">Full-Stack Web Development</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                Responsive web applications built with HTML5, CSS3, JavaScript, and database integration.
+              </p>
+              <ul class="space-y-1 text-xs text-slate-300 font-mono mb-4">
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Clean Frontend & Backend</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> User Authentication & CRUD</li>
+              </ul>
+            </div>
+            <button onclick="selectService('Full-Stack Web Development')" class="btn btn-dark w-full text-xs font-semibold py-2">
+              Request Service
+            </button>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-dark-card flex flex-col justify-between">
+            <div>
+              <div class="w-9 h-9 rounded-lg bg-[#142323] text-teal-400 flex items-center justify-center mb-3">
+                <i data-lucide="user-check" class="w-4.5 h-4.5"></i>
+              </div>
+              <h3 class="text-sm font-bold text-white mb-1.5">AI Internship & Junior Roles</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                Open for internship and junior opportunities in AI and Data Science teams.
+              </p>
+              <ul class="space-y-1 text-xs text-slate-300 font-mono mb-4">
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Fast Learner & Dedicated</li>
+                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Solid CS Fundamentals</li>
+              </ul>
+            </div>
+            <button onclick="selectService('AI Internship / Junior Role')" class="btn btn-dark w-full text-xs font-semibold py-2">
+              Discuss Opportunity
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SELECTED WORK / PROJECTS (Concise, Clean Cards) -->
+    <section id="projects" class="py-16 bg-dark-base border-b border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-3">
+          <div>
+            <div class="text-xs font-mono text-accent-cyan uppercase tracking-wider mb-1.5">
+              // PORTFOLIO
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              Featured Projects.
+            </h2>
+          </div>
+          <p class="text-slate-400 text-xs">
+            Direct GitHub code and academic/internship deliverables.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+          <!-- Project 1 -->
+          <article class="project-dark-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="badge-dark text-indigo-400 font-mono text-[10px]">AI / NLP</span>
+                <span class="text-slate-400 text-[10px] font-mono">Python • Scikit-Learn</span>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">
+                AI Job-Tracker & Resume Matcher
+              </h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Evaluates resume alignment against job descriptions using TF-IDF feature extraction and Cosine Similarity to compute semantic match scores.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="tech-dark-tag">Python</span>
+                <span class="tech-dark-tag">TF-IDF</span>
+                <span class="tech-dark-tag">NLP</span>
+                <span class="tech-dark-tag">Scikit-Learn</span>
+              </div>
+            </div>
+            <a href="https://github.com/Jana-ctrl-s" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-accent-cyan hover:underline flex items-center gap-1.5 pt-3 border-t border-dark-border">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>View on GitHub</span>
+            </a>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-dark-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="badge-dark text-purple-400 font-mono text-[10px]">Deep Learning</span>
+                <span class="text-slate-400 text-[10px] font-mono">PyTorch</span>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">
+                DeepFakeLens — Media Verification
+              </h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Exploratory pipeline analyzing spatial frequency variances and spectrogram anomalies to detect synthetic media artifacts.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="tech-dark-tag">PyTorch</span>
+                <span class="tech-dark-tag">FFT Spectral</span>
+                <span class="tech-dark-tag">Python</span>
+              </div>
+            </div>
+            <a href="https://github.com/Jana-ctrl-s" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-accent-cyan hover:underline flex items-center gap-1.5 pt-3 border-t border-dark-border">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>View on GitHub</span>
+            </a>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-dark-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="badge-dark text-emerald-400 font-mono text-[10px]">NBE Internship</span>
+                <span class="text-slate-400 text-[10px] font-mono">SQL & Power BI</span>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">
+                Banking Customer 360 & Analytics
+              </h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Cleaned multi-table banking records and wrote SQL queries to build a consolidated Customer 360 view with an interactive Power BI dashboard.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="tech-dark-tag">SQL</span>
+                <span class="tech-dark-tag">Power BI</span>
+                <span class="tech-dark-tag">DAX</span>
+                <span class="tech-dark-tag">Customer 360</span>
+              </div>
+            </div>
+            <a href="https://github.com/Jana-ctrl-s" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-accent-cyan hover:underline flex items-center gap-1.5 pt-3 border-t border-dark-border">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>View on GitHub</span>
+            </a>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-dark-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="badge-dark text-cyan-400 font-mono text-[10px]">Academic Project</span>
+                <span class="text-slate-400 text-[10px] font-mono">Full-Stack Web</span>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">
+                Library Management System
+              </h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                Led front-end development and contributed to backend database integration for a full-stack library app with user auth, book inventory, and search.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="tech-dark-tag">HTML5</span>
+                <span class="tech-dark-tag">CSS3</span>
+                <span class="tech-dark-tag">JavaScript</span>
+                <span class="tech-dark-tag">Backend</span>
+              </div>
+            </div>
+            <a href="https://github.com/Jana-Farahat/IS231-Web-Technology-Project-Spring-2026" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-accent-cyan hover:underline flex items-center gap-1.5 pt-3 border-t border-dark-border">
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              <span>GitHub: IS231-Project</span>
+            </a>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-dark-card flex flex-col justify-between md:col-span-2">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="badge-dark text-amber-400 font-mono text-[10px]">C++ OOP</span>
+                <span class="text-slate-400 text-[10px] font-mono">Data Structures</span>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">
+                Trie Prefix Search & BigInteger Class (C++)
+              </h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                Implemented a Trie data structure for fast prefix-based string search alongside an arbitrary-precision BigInteger arithmetic class.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="tech-dark-tag">C++17</span>
+                <span class="tech-dark-tag">OOP</span>
+                <span class="tech-dark-tag">Trie Tree</span>
+                <span class="tech-dark-tag">Algorithms</span>
+              </div>
+            </div>
+            <a href="https://github.com/Jana-ctrl-s" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-accent-cyan hover:underline flex items-center gap-1.5 pt-3 border-t border-dark-border">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>View C++ Code</span>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE (Clean, Bulleted, Easy to Scan) -->
+    <section id="experience" class="py-16 bg-[#0a0c13] border-b border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-xs font-mono text-accent-purple uppercase tracking-wider mb-1.5">
+          // EXPERIENCE
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-8">
+          Internships & Practical Tracks.
+        </h2>
+
+        <div class="space-y-4">
+          
+          <div class="experience-dark-card">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 pb-2 border-b border-dark-border">
+              <div>
+                <h3 class="text-sm font-bold text-white">Data Science & AI Track (Round 5) — DEPI</h3>
+                <p class="text-xs text-slate-400">Digital Egypt Pioneers Initiative • 2026 – Present</p>
+              </div>
+              <span class="badge-dark text-accent-cyan self-start sm:self-center text-[10px]">Active</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-2.5 leading-relaxed">
+              Hands-on track covering practical data science workflows, exploratory data analysis, and machine learning models in Python.
+            </p>
+          </div>
+
+          <div class="experience-dark-card">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 pb-2 border-b border-dark-border">
+              <div>
+                <h3 class="text-sm font-bold text-white">Data Warehousing Intern — National Bank of Egypt (NBE)</h3>
+                <p class="text-xs text-slate-400">"More_Than_an_Internship" Program • Jul 2026</p>
+              </div>
+              <span class="badge-dark text-emerald-400 self-start sm:self-center text-[10px]">Completed</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-2.5 leading-relaxed">
+              Cleaned banking records, wrote SQL queries to build a Customer 360 view, and created an interactive Power BI dashboard.
+            </p>
+          </div>
+
+          <div class="experience-dark-card">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 pb-2 border-b border-dark-border">
+              <div>
+                <h3 class="text-sm font-bold text-white">Generative AI Virtual Intern — CIB</h3>
+                <p class="text-xs text-slate-400">Commercial International Bank • Jul 2026</p>
+              </div>
+              <span class="badge-dark text-purple-400 self-start sm:self-center text-[10px]">Certified</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-2.5 leading-relaxed">
+              Completed certified Generative AI training in partnership with CFA Institute, CISI, SAS, and IFC for financial services.
+            </p>
+          </div>
+
+          <div class="experience-dark-card">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 pb-2 border-b border-dark-border">
+              <div>
+                <h3 class="text-sm font-bold text-white">Software Engineering Intern — Fuzetek</h3>
+                <p class="text-xs text-slate-400">Summer 2025</p>
+              </div>
+              <span class="badge-dark text-slate-400 self-start sm:self-center text-[10px]">Completed</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-2.5 leading-relaxed">
+              Practiced C++ (OOP, data structures, Trie, BigInteger), Git version control, and built a messaging simulator.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS (Clean, Honest, Concise) -->
+    <section id="skills" class="py-16 bg-dark-base border-b border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-xs font-mono text-accent-cyan uppercase tracking-wider mb-1.5">
+          // SKILLS
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-8">
+          Technical Toolkit.
+        </h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 font-mono text-xs">
+          
+          <div class="p-4 bg-dark-card rounded-xl border border-dark-border">
+            <h3 class="text-white font-bold text-xs font-sans pb-2 mb-2 border-b border-dark-border text-indigo-400">
+              AI & ML
+            </h3>
+            <ul class="space-y-1.5 text-slate-300">
+              <li>• Machine Learning</li>
+              <li>• Scikit-Learn</li>
+              <li>• Prompt Engineering</li>
+              <li>• Deep Learning Basics</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-dark-card rounded-xl border border-dark-border">
+            <h3 class="text-white font-bold text-xs font-sans pb-2 mb-2 border-b border-dark-border text-accent-cyan">
+              Data & Analytics
+            </h3>
+            <ul class="space-y-1.5 text-slate-300">
+              <li>• SQL Queries</li>
+              <li>• Power BI & DAX</li>
+              <li>• Pandas & NumPy</li>
+              <li>• Customer 360</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-dark-card rounded-xl border border-dark-border">
+            <h3 class="text-white font-bold text-xs font-sans pb-2 mb-2 border-b border-dark-border text-purple-400">
+              Languages & Web
+            </h3>
+            <ul class="space-y-1.5 text-slate-300">
+              <li>• Python</li>
+              <li>• C++ (OOP)</li>
+              <li>• JavaScript</li>
+              <li>• HTML5 & CSS3</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-dark-card rounded-xl border border-dark-border">
+            <h3 class="text-white font-bold text-xs font-sans pb-2 mb-2 border-b border-dark-border text-emerald-400">
+              CS & Tools
+            </h3>
+            <ul class="space-y-1.5 text-slate-300">
+              <li>• Data Structures</li>
+              <li>• Algorithms (150+ CP)</li>
+              <li>• Git & GitHub</li>
+              <li>• Arabic & English</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION (Clean Degree & 3 Certifications) -->
+    <section id="education" class="py-16 bg-[#0a0c13] border-b border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-xs font-mono text-accent-purple uppercase tracking-wider mb-1.5">
+          // EDUCATION
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-8">
+          Education & Credentials.
+        </h2>
+
+        <!-- Degree -->
+        <div class="p-5 bg-dark-card rounded-xl border border-dark-border mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-lg bg-[#141829] text-indigo-400 flex items-center justify-center shrink-0">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-bold text-white">Cairo University — Faculty of Computers and Artificial Intelligence</h3>
+              <p class="text-xs text-accent-cyan">B.Sc. in Computer Science & AI</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Certifications 3 Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="p-4 bg-dark-card rounded-xl border border-dark-border text-xs">
+            <h4 class="font-bold text-white mb-1">Machine Learning Specialization</h4>
+            <p class="text-accent-cyan font-mono text-[11px]">DeepLearning.AI (Andrew Ng)</p>
+          </div>
+
+          <div class="p-4 bg-dark-card rounded-xl border border-dark-border text-xs">
+            <h4 class="font-bold text-white mb-1">Generative AI Certificate</h4>
+            <p class="text-purple-400 font-mono text-[11px]">CIB Summer Program (Jul 2026)</p>
+          </div>
+
+          <div class="p-4 bg-dark-card rounded-xl border border-dark-border text-xs">
+            <h4 class="font-bold text-white mb-1">Meta Full Stack Developer</h4>
+            <p class="text-emerald-400 font-mono text-[11px]">Meta • Coursera</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION (Simple, Direct, Functional) -->
+    <section id="contact" class="py-16 bg-[#07080c]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- Left Contact Text -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="text-xs font-mono text-accent-cyan uppercase tracking-wider">
+              // CONTACT
+            </div>
+            
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
+              Have an idea?<br />
+              <span class="gradient-headline">Let's build something together.</span>
+            </h2>
+
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Available for freelance contracts, AI & Data Science internships, Power BI dashboards, and custom Python scripts.
+            </p>
+
+            <!-- Direct Contact Card with 1-Click Copy -->
+            <div class="space-y-2.5 pt-2">
+              <div class="p-3.5 rounded-xl bg-dark-card border border-dark-border flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-[#141829] text-accent-cyan flex items-center justify-center">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <span class="text-[9px] font-mono text-slate-500 uppercase block">Direct Email</span>
+                    <a href="mailto:janaahmedf18@gmail.com" class="text-xs font-mono font-bold text-white hover:text-accent-cyan transition-colors">
+                      janaahmedf18@gmail.com
+                    </a>
+                  </div>
+                </div>
+                <button onclick="copyEmail()" class="btn btn-dark text-xs py-1.5 px-2.5 font-mono flex items-center gap-1 text-slate-300 hover:text-white" title="Copy Email">
+                  <i data-lucide="copy" class="w-3 h-3"></i>
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-dark-card border border-dark-border flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-[#07080c] text-white flex items-center justify-center border border-dark-border">
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <span class="text-[9px] font-mono text-slate-500 uppercase block">GitHub</span>
+                    <span class="text-xs font-mono font-bold text-white">github.com/Jana-ctrl-s</span>
+                  </div>
+                </div>
+                <a href="https://github.com/Jana-ctrl-s" target="_blank" rel="noopener noreferrer" class="btn btn-dark text-xs py-1.5 px-2.5 font-mono text-accent-cyan">
+                  <span>Visit</span>
+                  <i data-lucide="external-link" class="w-3 h-3"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Inquiry Form -->
+          <div class="lg:col-span-7">
+            <div class="bg-dark-card rounded-xl border border-dark-border p-5 sm:p-6 shadow-xl">
+              <h3 class="text-sm font-bold text-white mb-1 font-mono">// Quick Project Inquiry</h3>
+              <p class="text-xs text-slate-400 mb-4 font-sans">Send me a message and I'll reply promptly.</p>
+
+              <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-3.5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label for="userName" class="block text-[10px] font-bold text-slate-400 uppercase font-mono mb-1">Your Name *</label>
+                    <input type="text" id="userName" required placeholder="e.g. Sarah Jenkins" class="form-dark-input" />
+                  </div>
+                  <div>
+                    <label for="userEmail" class="block text-[10px] font-bold text-slate-400 uppercase font-mono mb-1">Email Address *</label>
+                    <input type="email" id="userEmail" required placeholder="name@company.com" class="form-dark-input" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="serviceSelect" class="block text-[10px] font-bold text-slate-400 uppercase font-mono mb-1">Service Needed *</label>
+                  <select id="serviceSelect" required class="form-dark-input">
+                    <option value="" disabled selected>Select service...</option>
+                    <option value="Machine Learning Models">Machine Learning Models</option>
+                    <option value="Data Analysis & EDA">Data Analysis & EDA</option>
+                    <option value="Power BI Dashboards">Power BI Dashboards</option>
+                    <option value="Python Automation">Python Automation & Scripting</option>
+                    <option value="Full-Stack Web Development">Full-Stack Web Development</option>
+                    <option value="AI Internship / Junior Role">AI Internship / Junior Role Discussion</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="projectMessage" class="block text-[10px] font-bold text-slate-400 uppercase font-mono mb-1">Message / Scope *</label>
+                  <textarea id="projectMessage" required rows="3" placeholder="Briefly describe your requirements or timeline..." class="form-dark-input resize-none"></textarea>
+                </div>
+
+                <div class="pt-1">
+                  <button type="submit" id="submitBtn" class="btn btn-gradient w-full py-2.5 text-xs font-bold font-mono flex items-center justify-center gap-1.5 shadow-lg shadow-indigo-500/20">
+                    <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                    <span>Send Message</span>
+                  </button>
+                </div>
+
+                <div id="formSuccessToast" class="hidden p-3 rounded-lg bg-emerald-950/60 border border-emerald-800 text-emerald-300 text-xs font-mono flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
+                  <span>Opening direct email with your details...</span>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#050609] text-slate-500 py-8 border-t border-dark-border text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <div class="w-6 h-6 rounded bg-indigo-600 text-white font-bold flex items-center justify-center text-xs font-mono">
+          JF
+        </div>
+        <span class="text-white font-bold text-xs">Jana Ahmed Farahat</span>
+        <span class="text-slate-600 font-mono">• Cairo University (FCAI)</span>
+      </div>
+
+      <div class="text-[11px] font-mono text-slate-400">
+        © 2026 Jana Ahmed Farahat
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-[#121524] text-white px-4 py-2.5 rounded-xl shadow-2xl border border-indigo-500/30 text-xs font-mono flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+    <span id="toastMessage">Email copied to clipboard!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
